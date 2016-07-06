@@ -13,6 +13,7 @@ namespace TESTER {
             GameState state = menu.Display();
 
             Console.WriteLine();
+            Console.WriteLine();
 
             //Console.ReadKey();
         }
