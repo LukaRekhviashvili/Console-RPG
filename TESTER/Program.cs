@@ -8,14 +8,19 @@ using TESTER.Game_States;
 namespace TESTER {
     class Program {
         static void Main(string[] args) {
-            MainMenuState menu = new MainMenuState();
+            InitialiseGameProperties();
 
+            MainMenuState menu = new MainMenuState();
             GameState state = menu.Display();
 
-            Console.WriteLine();
-            Console.WriteLine();
+            state.Display();
 
             //Console.ReadKey();
+        }
+
+        static void InitialiseGameProperties() {
+            Console.BufferHeight = Console.WindowHeight = 50;
+            Console.BufferWidth = Console.WindowWidth = 107;
         }
     }
 }

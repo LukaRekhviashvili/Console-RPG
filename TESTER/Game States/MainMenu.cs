@@ -54,8 +54,15 @@ namespace TESTER.Game_States {
         void DisplayOptions() {
             Console.Clear();
 
+            Console.WriteLine("\t\t\t\t\t  +------------------+");
+            Console.WriteLine("\t\t\t\t\t  |  The Mighty RPG  |");
+            Console.WriteLine("\t\t\t\t\t  +------------------+");
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine();
+
             for (int i = 0; i < _menuOptions.Count; i++) {
-                Console.Write("\t\t\t");
+                Console.Write("\t\t\t\t\t");
 
                 if (i == GameOption) 
                     Console.Write("-->");
@@ -68,6 +75,11 @@ namespace TESTER.Game_States {
                 Console.WriteLine();
                 Console.WriteLine();
             }
+
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine();
         }
     }
 }
