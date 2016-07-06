@@ -10,17 +10,18 @@ namespace TESTER {
         static void Main(string[] args) {
             InitialiseGameProperties();
 
-            MainMenuState menu = new MainMenuState();
-            GameState state = menu.Display();
+            GameState state = new MainMenuState();
 
-            state.Display();
+            while (!(state is ExitState)) {
+                state = state.Display();    
+            }
 
             //Console.ReadKey();
         }
 
         static void InitialiseGameProperties() {
             Console.BufferHeight = Console.WindowHeight = 50;
-            Console.BufferWidth = Console.WindowWidth = 107;
+            Console.BufferWidth = Console.WindowWidth = 108;
         }
     }
 }

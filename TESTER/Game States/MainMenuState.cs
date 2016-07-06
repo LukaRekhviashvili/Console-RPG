@@ -25,12 +25,12 @@ namespace TESTER.Game_States {
         }
 
         public MainMenuState() {
-            _menuOptions.Insert(1, "Continue");
+            //_menuOptions.Insert(1, "Continue");
         }
 
         public override GameState Display() {
             while (true) {
-                DisplayOptions();
+                DisplayManuOptions();
 
                 while (true) {
                     ConsoleKeyInfo userInput = Console.ReadKey(true);
@@ -45,13 +45,18 @@ namespace TESTER.Game_States {
                         break; 
                     }
 
-                    if (userInput.Key == ConsoleKey.Enter)
+                    if (userInput.Key == ConsoleKey.Enter) {
+                        if (_menuOptions[GameOption].Trim() == "Exit") {
+                            return new ExitState();
+                        }
+
                         return new MainMenuState();
+                    }
                 }
             }
         }
 
-        void DisplayOptions() {
+        void DisplayManuOptions() {
             Console.Clear();
 
             Console.WriteLine("\t\t\t\t\t  +------------------+");

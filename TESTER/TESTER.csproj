@@ -41,8 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Game States\ExitState.cs" />
     <Compile Include="Game States\GameState.cs" />
-    <Compile Include="Game States\MainMenu.cs" />
+    <Compile Include="Game States\MainMenuState.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
