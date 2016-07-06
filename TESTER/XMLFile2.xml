@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--just comment-->
+<People>
+  <Human>
+    <Name>Luka</Name>
+    <Age>19</Age>
+    <Gender>Male</Gender>
+  </Human>
+  <Human>
+    <Name>Anna</Name>
+    <Age>20</Age>
+    <Gender>Female</Gender>
+  </Human>
+</People>
