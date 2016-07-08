@@ -46,11 +46,14 @@ namespace TESTER.Game_States {
                     }
 
                     if (userInput.Key == ConsoleKey.Enter) {
-                        if (_menuOptions[GameOption].Trim() == "Exit") {
-                            return new ExitState();
+                        switch(_menuOptions[GameOption].Trim()){
+                            case "Exit":
+                                return new ExitState();
+                            case "New Game":
+                                return new PlayState();
+                            default:
+                                return new MainMenuState();
                         }
-
-                        return new MainMenuState();
                     }
                 }
             }

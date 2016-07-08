@@ -13,7 +13,7 @@ namespace TESTER {
             GameState state = new MainMenuState();
 
             while (!(state is ExitState)) {
-                state = state.Display();    
+                state = state.Display();
             }
 
             //Console.ReadKey();
